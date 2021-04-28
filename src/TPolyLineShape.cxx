@@ -19,6 +19,7 @@
 #include "TSPHE.h"
 #include "TView.h"
 #include "TVirtualPad.h"
+#include "TVirtualX.h"
 #include "TTablePadView3D.h"
 #include "TPoint.h"
 #include "TVirtualPS.h"
