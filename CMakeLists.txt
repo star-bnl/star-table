@@ -1,6 +1,10 @@
-############################################################################
-# CMakeLists.txt file for building ROOT misc/table package
-# @author Pere Mato, CERN
-############################################################################
+cmake_minimum_required(VERSION 3.6 FATAL_ERROR)
 
-ROOT_STANDARD_LIBRARY_PACKAGE(Table DEPENDENCIES Core Tree Gpad Graf3d Graf Hist RIO MathCore)
+project(star-table LANGUAGES CXX)
+
+find_package(ROOT REQUIRED)
+
+set(CMAKE_INSTALL_INCLUDEDIR include)
+set_directory_properties(PROPERTIES INCLUDE_DIRECTORIES ${PROJECT_SOURCE_DIR}/inc)
+
+ROOT_STANDARD_LIBRARY_PACKAGE(Table DEPENDENCIES ROOT::Core ROOT::Tree ROOT::Gpad ROOT::Graf3d ROOT::Graf ROOT::Hist ROOT::RIO ROOT::MathCore)
